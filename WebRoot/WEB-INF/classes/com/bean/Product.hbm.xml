@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.bean">
+	<class name="Product" table="t_product">
+		<id name="id" type="integer">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="name" />
+		<many-to-one name="effect" class="Effect" column="effect" />
+		<many-to-one name="productType" class="ProductType"
+			column="productType" />
+		<many-to-one name="series" class="Series" column="series" />
+		<property name="useage" />
+		<property name="introduction" />
+		<property name="qualityLife" />
+		<property name="image1" />
+		<property name="image2" />
+		<property name="image3" />
+		<property name="image4" />
+		<property name="with1" />
+		<property name="with2" />
+		<property name="with3" />
+	</class>
+</hibernate-mapping>
